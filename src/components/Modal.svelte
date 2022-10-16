@@ -2,6 +2,7 @@
     import {createEventDispatcher} from 'svelte';
     import {fade} from "svelte/transition";
     import keycode from "keycode";
+    import {_} from 'svelte-i18n';
 
     export let visible: boolean;
     export let title: string;
@@ -30,7 +31,9 @@
                 {title}
             </div>
             <div class="absolute border border-black -top-6 h-12 flex items-center justify-center -right-1 bg-yellow-200 rounded-3xl w-12 text-3xl cursor-pointer"
-                 on:click={close}>
+                 on:click={close}
+                 title="{$_('close')}"
+            >
                 <span class="relative -top-1">⨯</span>
             </div>
             <div class="p-6 h-full">

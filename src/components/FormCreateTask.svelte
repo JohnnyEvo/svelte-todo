@@ -1,10 +1,11 @@
 <script lang="ts">
     import {createEventDispatcher} from 'svelte';
-    import {add, tasks} from '../store/task';
+    import {add} from '../store/task';
     import Task from "../class/Task";
     import validator from 'validator';
     import {fade} from "svelte/transition";
     import {onMount} from 'svelte';
+    import {_} from 'svelte-i18n';
 
     export let titleMessageError: string = '';
     export let contentMessageError: string = '';
@@ -49,10 +50,10 @@
         </div>
     {/if}
     <div class="relative w-full after:content-['*'] after:relative after:w-full after:h-12 after:bg-black after:block after:rounded-lg after:-top-10 after:left-2 after:z-0">
-        <label for="title" class="sr-only">Titre</label>
+        <label for="title" class="sr-only">{$_('title_event')}</label>
         <input type="text" id="title"
                class="relative w-full border-2 border-black rounded-lg h-12 z-10 placeholder:text-slate-400 focus-visible:outline-black focus-visible:outline-0 pl-5"
-               placeholder="Titre"
+               placeholder="{$_('title_event')}"
         >
     </div>
     { #if contentMessageError }
@@ -61,10 +62,10 @@
         </div>
     {/if}
     <div class="relative w-full after:content-['*'] after:relative after:w-full after:h-12 after:bg-black after:block after:rounded-lg after:-top-10 after:left-2 after:z-0">
-        <label for="content" class="sr-only">Contenu</label>
+        <label for="content" class="sr-only">{$_('content')}</label>
         <textarea name="content" id="content" cols="30" rows="10"
                   class="relative w-full border-2 border-black rounded-lg h-12 z-10 placeholder:text-slate-400 focus-visible:outline-black focus-visible:outline-0 pl-5 pt-2 min-h-[4rem]"
-                  placeholder="Ma tâche"></textarea>
+                  placeholder="{$_('content_event')}"></textarea>
     </div>
     <div class="self-end">
         <div class="relative group">
@@ -72,7 +73,7 @@
             <button type="submit"
                     class="absolute top-0 left-0 border border-black px-4 py-2 rounded-xl font-bold bg-yellow-200 relative group-hover:rounded-3xl transition-all group-hover:bg-yellow-300"
                     on:click={addTask}>
-                Créer une tâche
+                {$_('create_task')}
             </button>
         </div>
     </div>
