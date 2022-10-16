@@ -5,7 +5,7 @@
 </script>
 
 <figure
-        class="min-h-[6rem] bg-white rounded-2xl p-4 hover:bg-indigo-600 cursor-pointer transition-all border-2 border-black hover:text-white select-none"
+        class="min-h-[6rem] bg-white rounded-2xl p-4 transition-all border-2 border-black select-none {!realized? 'hover:bg-indigo-600 cursor-pointer hover:text-white':''}"
         data-id="{id}"
 >
     <h3 class="text-sm font-bold uppercase" class:line-through={realized}>{ title }</h3>
