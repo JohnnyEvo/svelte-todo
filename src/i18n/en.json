@@ -7,5 +7,7 @@
   "new_event": "New task",
   "close": "Close",
   "title_event": "Title",
-  "content_event": "Content"
+  "content_event": "Content",
+  "french": "French",
+  "english": "English"
 }

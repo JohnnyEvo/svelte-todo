@@ -11,6 +11,7 @@
     import {elementsOverlap} from './utils';
     import {_, isLoading} from 'svelte-i18n';
     import Loader from './components/Loader.svelte';
+    import Lang from "./components/Lang.svelte";
 
     export let fakeCardActive: boolean = false;
     export let fakeCardHover: boolean = false;
@@ -59,6 +60,9 @@
 {#if $isLoading}
     <Loader/>
 {:else}
+    <div class="m-4">
+        <Lang/>
+    </div>
     <div class='m-4'>
         <h1 class="text-4xl text-center font-['Fredoka_One']">{$_('title')}</h1>
 

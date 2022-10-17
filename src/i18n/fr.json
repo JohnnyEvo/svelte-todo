@@ -7,5 +7,7 @@
   "new_event": "Nouvelle tâche",
   "close": "Fermer",
   "title_event": "Titre",
-  "content_event": "Ma tâche"
+  "content_event": "Ma tâche",
+  "french": "Français",
+  "english": "Anglais"
 }
