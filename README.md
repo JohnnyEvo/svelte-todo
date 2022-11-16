@@ -2,6 +2,8 @@
 
 Todo list example project with i18n and local storage.
 
+![Screenshot](./screenshot.png)
+
 ## Installation
 
 ```sh
